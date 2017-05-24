@@ -1,0 +1,230 @@
+<!--
+## Introduction
+
+This sample showcases how to build a housing page in AMP HTML. Explore how to use amp components, like `amp-carousel`, `form` and `amp-list` to create a housing page.
+-->
+<!-- -->
+<!doctype html>
+<html ⚡>
+<head>
+    <link rel="manifest" href="/manifest.json">
+    <title>XT Summit 2017</title>
+    <meta charset="utf-8">
+    
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!--
+    Additionally used AMP components must be imported in the header.
+    -->
+    <script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <link rel="canonical" href="http://ampdemo102.herokuapp.com/index.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+      body{
+        /*padding-left: 5%;
+        width: 90%;*/
+        text-align: center;
+      }
+      button.login-button {
+    background-color: #0030FF;
+    opacity: 0.777;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+}
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    .description li {
+      list-style-type: square;
+    }
+    #housing-description {
+      clear: both;
+    }
+    amp-carousel {
+      margin: 0;
+    }
+    amp-accordion p, amp-accordion h4 {
+      padding: 16px;
+    }
+    amp-accordion h4 {
+      font-size: 18px;
+    }
+    .related {
+      background-color: #f5f5f5;
+      display: block;
+      color: #111;
+      height: 100px;
+      padding: 0;
+      padding-right: 8px;
+    }
+    .related amp-img {
+      line-height: 24px;
+      font-weight: 400;
+      font-size: 24px;
+      vertical-align: middle;
+      float: left;
+      margin-right: 10px;
+    }
+    .related:active {
+      background-color: #ccc;
+    }
+    .price-description {
+      color: green;
+      font-weight: 400;
+    }
+    amp-fit-text {
+      margin-bottom: 24px;
+      margin-top: 24px;
+      padding: 0 16px;
+    }
+    .price-other {
+      font-weight: bold;
+    }
+    .contact-section {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 744px) {
+      .contact-section {
+        display: block;
+      }
+    }
+    @media (max-width: 744px) {
+      .contact {
+        display: flex;
+        margin-bottom: 16px;
+        margin-top: 24px;
+        justify-content: center;
+        padding: 0 16px;
+      }
+    }
+    .social-share {
+      line-height: 36px;
+      display: flex;
+      margin-left: 9%;
+    }
+    .list-overflow {
+      position: absolute;
+      bottom: 0;
+    }
+    .form-field-right {
+      border: 1px solid #dfdfdf;
+      background: white;
+      width: 200px;
+    }
+    .form-field-left {
+      width: 200px;
+    }
+    .ampstart-card {
+      text-decoration: none;
+    }
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    </head>
+    <body>
+            <h4 class="heading">
+            <amp-fit-text width="300" height="45" layout="responsive" max-font-size="45">
+                    XT Summit Bangalore Chapter 2017</amp-fit-text>
+        </h4>
+        <h4 class="price-description mx1">9 June, Sapinet BCBP office, Bangalore</h4>
+        <p id="housing-description" class="m1"></p>
+
+        <!-- ## Image Gallery -->
+        <!-- The `amp-carousel` works very well for housing image galleries. Learn more about `amp-carousel` [here](/advanced/image_galleries_with_amp-carousel/). -->
+        <amp-carousel width="512" height="384" layout="responsive" type="slides">
+            <amp-img src="/img/sapient-razorfish.jpg" width="1280" height="960" layout="responsive" alt="Buckingham Palace" attribution="https://pixabay.com"></amp-img>
+            <amp-img src="/img/Sapient-banner1.jpg" width="1280" height="853" layout="responsive" alt="Buckingham Palace entrance" attribution="https://pixabay.com"></amp-img>
+        </amp-carousel>
+        <!-- These buttons are used for requesting details on the property. -->
+        
+   <section>
+   <button type="button" class="login-button">Login</button>
+   </section>
+
+    <!-- ## Social -->
+    <!-- The Social Share extension provides a common interface for share buttons. Learn more about `amp-social-share` [here](/components/amp-social-share/). -->
+    <p class="social-share p1">
+        <amp-social-share type="twitter"
+        width="60"
+        height="44" class="mr2"></amp-social-share>
+        <amp-social-share type="facebook"
+        width="60"
+        height="44"
+        data-attribution="254325784911610" class="mr2"> </amp-social-share>
+        <amp-social-share type="gplus"
+        width="60"
+        height="44" class="mr2"></amp-social-share>
+        <amp-social-share type="email"
+        width="60"
+        height="44" class="mr2"></amp-social-share>
+        <amp-social-share type="pinterest"
+        width="66"
+        height="44" class="mr2"></amp-social-share>
+    </p>
+
+    <!-- ## Collapsibles/Accordion -->
+    <!-- Use `amp-accordion` to hide and show additional data about your product. Learn more about `amp-accordion` [here](/components/amp-accordion/). Embedding Google Maps is possible via the [Google Maps Embed API](https://developers.google.com/maps/documentation/embed/guide), see [here](https://ampbyexample.com/components/amp-iframe/#example16) for a sample.-->
+    <div>
+      <amp-accordion>
+        <section>
+          <h4>Description</h4>
+          <ul class="description p1">
+           <li> A meet up for the XT community @sapient </li>
+          </ul>
+        </section>
+        <section>
+          <h4>View on map</h4>
+          <amp-iframe width="600"
+                      height="400"
+                      layout="responsive"
+                      sandbox="allow-scripts allow-same-origin allow-popups"
+                      frameborder="0"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.9239598060392!2d77.69567195804501!3d12.981577197712332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11784c64c2ff%3A0x99942680786190f7!2sSapient+BCBP!5e0!3m2!1sen!2sus!4v1495607280806">
+          </amp-iframe>
+        </section>
+      </amp-accordion>
+    </div>
+    <amp-install-serviceworker src="service-worker.js"
+        data-iframe-src="sw.html"
+        layout="nodisplay">
+    </amp-install-serviceworker>
+
+    <!-- ## User Analytics -->
+    <!-- Analytics must be configured in the body. Here we use Google Analytics to track pageviews.  -->
+    <amp-analytics type="googleanalytics">
+      <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-83007754-1"
+            },
+            "triggers": {
+                "default pageview": {
+                    "on": "visible",
+                    "request": "pageview",
+                    "vars": {
+                        "title": "XT Summit 2017"
+                    }
+                }
+            }
+        }
+      </script>
+    </amp-analytics>
+</body>
+</html>

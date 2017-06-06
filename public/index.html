@@ -156,7 +156,9 @@ This sample showcases how to build a housing page in AMP HTML. Explore how to us
         <!-- These buttons are used for requesting details on the property. -->
         
    <section>
-   <button onclick="window.location.href='/login.html'" class="login-button">Login Page</button>
+   <a href="/login.html">
+   <button class="login-button">Login Page</button>
+   </a>
    </section>
 
     <!-- ## Social -->
@@ -203,7 +205,7 @@ This sample showcases how to build a housing page in AMP HTML. Explore how to us
       </amp-accordion>
     </div>
     <amp-install-serviceworker src="service-worker.js"
-        data-iframe-src="sw.html"
+        data-iframe-src="./sw.html"
         layout="nodisplay">
     </amp-install-serviceworker>
 

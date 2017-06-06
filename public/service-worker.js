@@ -12,17 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'weatherData-v1';
-var cacheName = 'weatherPWA-final-1';
+var dataCacheName = 'ampPwa';
+var cacheName = 'ampPwa-final-1';
 var filesToCache = [
-  '/*',
+  '/',
   '/index.html',
   '/login.html',
   '/speakers.html',
   '/img/Sapient-banner1.jpg',
   '/img/sapient-razorfish.jpg',
   '/service-worker.js',
-  '/sw.html'
+  '/sw.html',
+  '/img/BG.png',
+  '/img/LOGO1.png',
+  '/img/Login_BG.png',
+  '/img/Logo_login.png',
+  '/img/amp-logo.png'
 ];
 
 self.addEventListener('install', function(e) {

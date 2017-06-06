@@ -36,7 +36,7 @@ This sample showcases how to build a housing page in AMP HTML. Explore how to us
         background-image: url('/img/BG.png');
       }
       button.login-button {
-    background-color: #0030FF;
+    background-color: #55c8e2;
     opacity: 0.777;
     border: none;
     color: white;
@@ -118,7 +118,7 @@ This sample showcases how to build a housing page in AMP HTML. Explore how to us
     .social-share {
       line-height: 36px;
       display: flex;
-      margin-left: 9%;
+      margin-left: 13%;
     }
     .list-overflow {
       position: absolute;
@@ -144,19 +144,19 @@ This sample showcases how to build a housing page in AMP HTML. Explore how to us
             <amp-fit-text width="300" height="45" layout="responsive" max-font-size="45">
                     XT Summit Bangalore Chapter 2017</amp-fit-text>
         </h4>
-        <h4 class="price-description mx1">9 June, Sapinet BCBP office, Bangalore</h4>
+        <h4 class="price-description mx1">9 June, Sarovar Portico, Bangalore</h4>
         <p id="housing-description" class="m1"></p>
 
         <!-- ## Image Gallery -->
         <!-- The `amp-carousel` works very well for housing image galleries. Learn more about `amp-carousel` [here](/advanced/image_galleries_with_amp-carousel/). -->
         <amp-carousel width="512" height="384" layout="responsive" type="slides">
-            <amp-img src="/img/sapient-razorfish.jpg" width="1280" height="960" layout="responsive" alt="Sapinet name banner" attribution="https://pixabay.com"></amp-img>
             <amp-img src="/img/Sapient-banner1.jpg" width="1280" height="853" layout="responsive" alt="XT Summit banner" attribution="https://pixabay.com"></amp-img>
+            <amp-img src="/img/sapient-razorfish.jpg" width="1280" height="853" layout="responsive" alt="Sapinet name banner" attribution="https://pixabay.com"></amp-img>
         </amp-carousel>
         <!-- These buttons are used for requesting details on the property. -->
         
    <section>
-   <button type="button" class="login-button">Login</button>
+   <button onclick="window.location.href='/login.html'" class="login-button">Login Page</button>
    </section>
 
     <!-- ## Social -->

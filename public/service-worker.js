@@ -15,8 +15,9 @@
 var dataCacheName = 'weatherData-v1';
 var cacheName = 'weatherPWA-final-1';
 var filesToCache = [
+  '/*',
   '/index.html',
-  '/gallery.html',
+  '/login.html',
   '/speakers.html',
   '/img/Sapient-banner1.jpg',
   '/img/sapient-razorfish.jpg',

@@ -28,6 +28,17 @@ This sample showcases how to build a housing page in AMP HTML. Explore how to us
     <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
     <link rel="canonical" href="http://ampdemo102.herokuapp.com/index.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebApp",
+        "headline": "XT summit 2017",
+        "datePublished": "2016-06-0112:02:41+5:30",
+        "image": [
+          "/img/Logo_Login.png"
+        ]
+      }
+    </script>
     <style amp-custom>
       body{
         /*padding-left: 5%;
@@ -204,7 +215,7 @@ This sample showcases how to build a housing page in AMP HTML. Explore how to us
         </section>
       </amp-accordion>
     </div>
-    <amp-install-serviceworker src="service-worker.js"
+    <amp-install-serviceworker src="https://ampdemo102.herokuapp.com/service-worker.js"
         data-iframe-src="./sw.html"
         layout="nodisplay">
     </amp-install-serviceworker>
